@@ -94,7 +94,7 @@ const nodeMeta = {
 };
 
 /* ---------- Single network diagram ---------- */
-function NetworkDiagram({ combo, index, svgRef }) {
+function NetworkDiagram({ combo, index, svgRef, renderVisualization }) {
   const [nodes, setNodes] = useState(createInitialNodes);
 
   const handleDrag = useCallback((id, x, y) => {
@@ -155,13 +155,18 @@ function NetworkDiagram({ combo, index, svgRef }) {
           Output ({combo.output})
         </text>
       </svg>
+      {renderVisualization && (
+        <div className="network-viz-container">
+          {renderVisualization(combo, index)}
+        </div>
+      )}
       <p className="bio-example">{combo.biologicalExample}</p>
     </div>
   );
 }
 
 /* ---------- Main NeuralNetwork component ---------- */
-export default function NeuralNetwork({ method }) {
+export default function NeuralNetwork({ method, renderVisualization }) {
   const svgRefs = useRef([]);
 
   if (!method) {
@@ -182,6 +187,7 @@ export default function NeuralNetwork({ method }) {
             combo={combo}
             index={i}
             svgRef={svgRefs.current[i]}
+            renderVisualization={renderVisualization}
           />
         );
       })}
