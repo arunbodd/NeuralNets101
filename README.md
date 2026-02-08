@@ -4,7 +4,7 @@ An interactive React.js dashboard covering loss functions, activation functions,
 
 ## Live Demo
 
-👉 [https://arunbodd.github.io/reactJS-based-ML/](https://arunbodd.github.io/reactJS-based-ML/)
+👉 [https://arunbodd.github.io/NeuralNets101/](https://arunbodd.github.io/NeuralNets101/)
 
 ## Features
 
