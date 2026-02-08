@@ -3,7 +3,7 @@ import { mlData } from './data/mlData';
 import ColorKey from './components/ColorKey';
 import MLTable from './components/MLTable';
 import MethodButtons from './components/MethodButtons';
-import NeuralNetwork from './components/NeuralNetwork';
+import MethodVisualizer from './components/MethodVisualizer';
 import './App.css';
 
 function App() {
@@ -39,16 +39,16 @@ function App() {
       </p>
       <MLTable data={mlData} onSelectMethod={handleSelect} selectedId={selectedId} />
 
-      <h2 ref={diagramRef}>Interactive Neural Network Diagrams</h2>
+      <h2 ref={diagramRef}>Interactive Visualizations</h2>
       <p className="hint">
-        Select a method to see activation function combinations. Drag the nodes!
+        Select a method to see its visualization (Neural Network, Regression Plot, or Clusters). Drag the nodes!
       </p>
       <MethodButtons
         data={mlData}
         selectedId={selectedId}
         onSelect={handleSelect}
       />
-      <NeuralNetwork method={selectedMethod} />
+      <MethodVisualizer selectedMethod={selectedMethod} />
     </div>
   );
 }
