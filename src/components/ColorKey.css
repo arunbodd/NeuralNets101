@@ -1,0 +1,40 @@
+.color-key {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px 24px;
+  margin-bottom: 24px;
+}
+
+.color-key-section + .color-key-section {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.color-key-section h3 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.color-key-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.color-key-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}

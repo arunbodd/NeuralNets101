@@ -1,0 +1,32 @@
+.app {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 24px 32px 60px;
+}
+
+.app h1 {
+  text-align: center;
+  color: #263238;
+  margin-bottom: 4px;
+}
+
+.app h2 {
+  color: #37474f;
+  border-bottom: 2px solid #90a4ae;
+  padding-bottom: 6px;
+  margin-top: 40px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #607d8b;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 1.05rem;
+}
+
+.hint {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
