@@ -6,11 +6,20 @@ import MethodButtons from './components/MethodButtons';
 import MethodVisualizer from './components/MethodVisualizer';
 import './App.css';
 
+// Set current chapter to control visibility
+// 1: Regression, Classification, Clustering
+// 2: + Dimensionality Reduction, Semi-Supervised
+// 3: + Generative, RL
+const CURRENT_CHAPTER = 1;
+
 function App() {
   const [selectedId, setSelectedId] = useState(null);
   const diagramRef = useRef(null);
 
-  const selectedMethod = mlData.find((m) => m.id === selectedId) || null;
+  // Filter available methods based on the current chapter
+  const visibleData = mlData.filter(m => (m.chapter || 1) <= CURRENT_CHAPTER);
+  
+  const selectedMethod = visibleData.find((m) => m.id === selectedId) || null;
 
   const handleSelect = (id) => {
     const newId = selectedId === id ? null : id;
@@ -37,7 +46,7 @@ function App() {
       <p className="hint">
         Click any row to view its neural network diagrams below.
       </p>
-      <MLTable data={mlData} onSelectMethod={handleSelect} selectedId={selectedId} />
+      <MLTable data={visibleData} onSelectMethod={handleSelect} selectedId={selectedId} />
 
       <h2 ref={diagramRef}>Interactive Visualizations</h2>
       <p className="hint">

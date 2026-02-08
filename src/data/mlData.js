@@ -2,6 +2,7 @@ export const mlData = [
   {
     id: 'regression',
     method: 'Regression',
+    chapter: 1,
     rowColor: '#fff3e0',
     lossFunctions: [
       'Mean Squared Error (MSE)',
@@ -34,6 +35,7 @@ export const mlData = [
   {
     id: 'classification',
     method: 'Classification',
+    chapter: 1,
     rowColor: '#e8f5e9',
     lossFunctions: [
       'Binary Cross-Entropy',
@@ -80,6 +82,7 @@ export const mlData = [
   {
     id: 'clustering',
     method: 'Clustering',
+    chapter: 1,
     rowColor: '#e3f2fd',
     lossFunctions: [
       'Reconstruction Loss',
@@ -117,6 +120,7 @@ export const mlData = [
   {
     id: 'dimensionality',
     method: 'Dimensionality Reduction',
+    chapter: 2,
     rowColor: '#fce4ec',
     lossFunctions: [
       'Reconstruction Loss',
@@ -154,6 +158,7 @@ export const mlData = [
   {
     id: 'semisupervised',
     method: 'Semi-Supervised Learning',
+    chapter: 2,
     rowColor: '#f3e5f5',
     lossFunctions: [
       'Cross-Entropy + Consistency Loss',
@@ -201,6 +206,7 @@ export const mlData = [
   {
     id: 'generative',
     method: 'Generative Models',
+    chapter: 3,
     rowColor: '#e0f7fa',
     lossFunctions: [
       'Adversarial Loss',
@@ -261,6 +267,7 @@ export const mlData = [
   {
     id: 'rl',
     method: 'Reinforcement Learning',
+    chapter: 3,
     rowColor: '#fff9c4',
     lossFunctions: [
       'Policy Gradient Loss',
