@@ -1,6 +1,6 @@
 import './MLTable.css';
 
-export default function MLTable({ data, onSelectMethod }) {
+export default function MLTable({ data, onSelectMethod, selectedId }) {
   return (
     <div className="table-wrapper">
       <table className="ml-table">
@@ -23,7 +23,7 @@ export default function MLTable({ data, onSelectMethod }) {
             <tr
               key={row.id}
               style={{ backgroundColor: row.rowColor }}
-              className="table-row"
+              className={`table-row${row.id === selectedId ? ' table-row-active' : ''}`}
               onClick={() => onSelectMethod(row.id)}
             >
               <td className="method-cell">{row.method}</td>

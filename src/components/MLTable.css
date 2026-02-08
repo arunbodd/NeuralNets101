@@ -40,6 +40,12 @@
   filter: brightness(0.93);
 }
 
+.table-row-active {
+  outline: 3px solid #1565c0;
+  outline-offset: -3px;
+  filter: brightness(0.92);
+}
+
 .method-cell {
   font-weight: 700;
   white-space: nowrap;
