@@ -1,13 +1,15 @@
 .table-wrapper {
   overflow-x: auto;
   margin-bottom: 32px;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 .ml-table {
-  width: 100%;
+  min-width: 1200px;
   border-collapse: collapse;
   font-size: 0.85rem;
-  table-layout: fixed;
+  table-layout: auto;
 }
 
 .ml-table th,
@@ -16,6 +18,7 @@
   padding: 8px 10px;
   vertical-align: top;
   text-align: left;
+  white-space: nowrap;
 }
 
 .ml-table th {
@@ -25,6 +28,7 @@
   position: sticky;
   top: 0;
   z-index: 1;
+  white-space: nowrap;
 }
 
 .table-row {
@@ -49,6 +53,7 @@
 
 .cell-list li {
   margin-bottom: 2px;
+  white-space: nowrap;
 }
 
 .cell-list.loss li {
