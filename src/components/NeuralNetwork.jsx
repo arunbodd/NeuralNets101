@@ -238,20 +238,28 @@ function NetworkDiagram({ combo, index, svgRef, renderVisualization, methodId })
          {methodId === 'dimensionality' ? (
            <>
               <text x={50} y={160} textAnchor="middle" fontSize={10} fill="#666">Input</text>
-              <text x={180} y={160} textAnchor="middle" fontSize={10} fill="#666">Bottleneck</text>
-              <text x={310} y={160} textAnchor="middle" fontSize={10} fill="#666">Reconstruction</text>
+              <text x={180} y={160} textAnchor="middle" fontSize={10} fill="#666">Bottleneck ({combo.hidden})</text>
+              <text x={310} y={160} textAnchor="middle" fontSize={10} fill="#666">Output ({combo.output})</text>
            </>
          ) : methodId === 'rl' ? (
            <>
               <text x={60} y={160} textAnchor="middle" fontSize={10} fill="#666">State</text>
-              <text x={160} y={160} textAnchor="middle" fontSize={10} fill="#666">Policy</text>
-              <text x={260} y={160} textAnchor="middle" fontSize={10} fill="#666">Action</text>
+              <text x={160} y={160} textAnchor="middle" fontSize={10} fill="#666">Hidden ({combo.hidden})</text>
+              <text x={260} y={160} textAnchor="middle" fontSize={10} fill="#666">Action ({combo.output})</text>
+           </>
+         ) : (methodId === 'classification' || methodId === 'semisupervised') ? (
+           <>
+              {/* Deep Network Layout: Inputs at 40, Hidden at 120/200, Output at 280 */}
+              <text x={40} y={160} textAnchor="middle" fontSize={10} fill="#666">Input</text>
+              <text x={160} y={160} textAnchor="middle" fontSize={10} fill="#666">Hidden Layers ({combo.hidden})</text>
+              <text x={280} y={160} textAnchor="middle" fontSize={10} fill="#666">Output ({combo.output})</text>
            </>
          ) : (
            <>
+            {/* Standard MLP Layout: I:60, H:180, O:300 */}
             <text x={60} y={160} textAnchor="middle" fontSize={10} fill="#666">Input</text>
-            <text x={180} y={160} textAnchor="middle" fontSize={10} fill="#666">Hidden Layer(s)</text>
-            <text x={300} y={160} textAnchor="middle" fontSize={10} fill="#666">Output</text>
+            <text x={180} y={160} textAnchor="middle" fontSize={10} fill="#666">Hidden ({combo.hidden})</text>
+            <text x={300} y={160} textAnchor="middle" fontSize={10} fill="#666">Output ({combo.output})</text>
            </>
          )}
 
